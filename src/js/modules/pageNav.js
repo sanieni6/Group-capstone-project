@@ -19,7 +19,7 @@ const pageNav = (navItems, removeClass) => {
         // clear the content of the main
         pageMain.innerHTML = '';
 
-       // define the api url
+        // define the api url
         const URL = 'https://api.artic.edu/api/v1/artworks?limit=20&fields=id,title,artist_display,place_of_origin,credit_line,term_titles,image_id';
 
         // call data from artwork api and render on page
@@ -36,9 +36,8 @@ const pageNav = (navItems, removeClass) => {
           // call the count function
           counter(artworkCollection, artworksCount);
         }).then(() => {
-           // add render comment pop-up here
+          // add render comment pop-up here
         });
-
       } else if (event.target.textContent === 'Exhibitions') {
         // call the remove class function
         removeClass(navItems);
@@ -48,7 +47,6 @@ const pageNav = (navItems, removeClass) => {
 
         // clear the content of the main
         pageMain.innerHTML = '';
-
       } else if (event.target.textContent === 'Shop') {
         // call the remove class function
         removeClass(navItems);
@@ -58,7 +56,6 @@ const pageNav = (navItems, removeClass) => {
 
         // clear the content of the main
         pageMain.innerHTML = '';
-
       }
     });
   });
