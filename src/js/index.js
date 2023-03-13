@@ -1,8 +1,8 @@
 import 'reset-css';
 import '../scss/styles.scss';
 import renderHeader from './modules/renderHeader.js';
-import removeActive from './modules/removeActive.js';
-import pageNav from './modules/pageNav.js';
+import removeActive from './modules/util/removeActive.js';
+import pageNav from './modules/util/pageNav.js';
 
 // render the header section
 renderHeader();
