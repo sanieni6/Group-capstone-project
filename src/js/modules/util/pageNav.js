@@ -7,7 +7,6 @@ const pageNav = (navItems, removeClass) => {
       } else if (event.target.textContent === 'Exhibitions') {
         removeClass(navItems);
         event.target.classList.add('active');
-        pageMain.innerHTML = '';
       } else if (event.target.textContent === 'Shop') {
         removeClass(navItems);
         event.target.classList.add('active');
