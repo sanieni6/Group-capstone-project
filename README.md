@@ -115,7 +115,7 @@ For this particular project, we will use the following endpoints:
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 ### Live Demo Link <a name="live-demo-link"></a>
-> [Live Demo Link](https://fmanimashaun.github.io/artwork-listing-app/)
+> [Live Demo Link](https://sanieni6.github.io/artworkListing-app/)
 
 > [Video Demo Link](#)
 
@@ -161,7 +161,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup <a name="setup"></a>
 
-- Open your GitHub account the repository's [link](https://github.com/fmanimashaun/artwork-listing-app)
+- Open your GitHub account the repository's [link](https://github.com/sanieni6/artworkListing-app)
 
 ### Prerequisites <a name="prerequisites"></a>
 
@@ -170,7 +170,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Install <a name="install"></a>
 
-- copy the repo's link and clone it by writing `git clone https://github.com/fmanimashaun/artwork-listing-app.git` on your git bash terminal.
+- copy the repo's link and clone it by writing `git clone https://github.com/sanieni6/artworkListing-app.git` on your git bash terminal.
 - `npm install` to install the dependencies.
 
 ### Run tests <a name="run-tests"></a>
