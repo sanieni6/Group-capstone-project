@@ -183,6 +183,12 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors <a name="authors"></a>
 
+👤 **Luis Sanchez**
+
+- [GitHub](https://github.com/sanieni6/)
+- [Twitter](https://twitter.com/its_luis_sz23)
+- [LinkedIn](https://www.linkedin.com/in/luissanchezz3/)
+
 👤 **Engr. Animashaun Fisayo**
 
 - [GitHub](https://github.com/fmanimashaun)
@@ -190,11 +196,6 @@ To get a local copy up and running follow these simple example steps.
 - [LinkedIn](https://www.linkedin.com/in/fmanimashaun/)
 - [Website](https://fmanimashaun.com)
 
-👤 **Luis Sanchez**
-
-- [GitHub](https://github.com/sanieni6/)
-- [Twitter](https://twitter.com/its_luis_sz23)
-- [LinkedIn](https://www.linkedin.com/in/luissanchezz3/)
 
 ## 🤝 Contributing <a name="contributing"></a>
 
