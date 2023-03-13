@@ -1,24 +1,21 @@
-// import the function to be tested
-import addTask from '../src/js/modules/addTask.js';
-
 // create a mock function for localStorage
 const localStorageMock = (() => {
   let store = {};
 
   return {
-    getItem (key) {
+    getItem(key) {
       return store[key];
     },
 
-    setItem (key, value) {
+    setItem(key, value) {
       store[key] = value;
     },
 
-    clear () {
+    clear() {
       store = {};
     },
 
-    removeItem (key) {
+    removeItem(key) {
       delete store[key];
     },
   };
@@ -26,4 +23,3 @@ const localStorageMock = (() => {
 
 // mock the local storage
 Object.defineProperty(window, 'localStorage', { value: localStorageMock });
-
