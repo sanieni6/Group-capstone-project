@@ -190,17 +190,11 @@ To get a local copy up and running follow these simple example steps.
 - [LinkedIn](https://www.linkedin.com/in/fmanimashaun/)
 - [Website](https://fmanimashaun.com)
 
-👤 **Gerson Sanchez**
+👤 **Luis Sanchez**
 
-- [GitHub](https://github.com/gealsanchez)
-- [Twitter](https://twitter.com/gealsanchez)
-- [LinkedIn](https://www.linkedin.com/in/gerson-sanchez-88309b57/)
-
-👤 **Francis Uche**
-
-- [GitHub](https://github.com/francis3400)
-- [Twitter](https://twitter.com/francisBlinkz)
-- [LinkedIn](https://www.linkedin.com/in/francis-uche-888675213)
+- [GitHub](https://github.com/sanieni6/)
+- [Twitter](https://twitter.com/its_luis_sz23)
+- [LinkedIn](https://www.linkedin.com/in/luissanchezz3/)
 
 ## 🤝 Contributing <a name="contributing"></a>
 
