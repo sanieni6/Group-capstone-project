@@ -1,0 +1,31 @@
+<div class="exhibitions__modal">
+      <div class="exhibitions__modal-wrapper">
+        <button class='exhibitions__modal-btn'>
+          <img class='exhibitions__modal-btn-img' src="img/close_gray.svg" alt="close">
+        </button>
+        <div class="exhibitions__modal-card">
+          <img class="exhibitions__modal-card-img" src="https://artic-web.imgix.net/37c66b6f-5c96-44b0-9a18-6d0d13885947/G28216-int-Press300ppi%2C3000px%2CsRGB%2CJPEG.jpg?auto=compress%2Cformat&fit=min&fm=jpg&q=80&rect=41%2C782%2C2918%2C1640" alt="project artwork">
+          <div class="exhibitions__modal-card-details">
+            <h3 class="exhibitions__modal-card-title">Van Gogh and the Avant-Garde: The Modern Landscape</h3>
+            <p class='exhibitions__modal-card-description'>Works by Post-Impressionist artists Vincent van Gogh, Georges Seurat, Paul Signac, Emile Bernard, and Charles Angrand
+            come together to reveal how the visual vocabulary of Paris's industrialized suburbs—bridges, embankments, factories,
+            parks, and villages—became vehicles for experimentation and innovation.</p>
+          </div>
+          <div class="exhibitions__modal-reservations">
+            <h4 class="exhibitions__modal-reservations-title">Reservations<span class="exhibitions__modal-reservations-count"></span>:
+            </h4>
+            <div class="exhibitions__modal-reservations-list">
+              <p class='exhibitions__modal-reservations-item'>03/11/2021 - 03/12/2021 by Alex</p>
+              <p class='exhibitions__modal-reservations-item'>03/14/2021 - 03/16/2021 by Mia</p>
+            </div>
+            <form action="" class="exhibitions__modal-reservations-add">
+              <h4 class="exhibitions__modal-reservations-add-title">Add a reservation:</h4>
+              <input type="text" name="name" id="name" placeholder='Your name'>
+              <input type="text" name="date" id="start_date" placeholder='Start date' onfocus="(this.type='date')" onblur="(this.type='text')">
+              <input type="text" name="date" id="end_date" placeholder='End date' onfocus="(this.type='date')" onblur="(this.type='text')">
+              <input class='exhibitions__modal-reservations-btn' type="submit" value="Reserve">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
