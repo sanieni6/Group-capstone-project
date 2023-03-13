@@ -1,37 +1,14 @@
 import 'reset-css';
 import '../scss/styles.scss';
+import renderHeader from './modules/renderHeader.js';
+import removeActive from './modules/removeActive.js';
+import pageNav from './modules/pageNav.js';
 
-// add event listener to the page
-document.addEventListener('click', (e) => {
-  if (e.target.dataset.btn === 'menu-open') {
-    // get the menu btn element
-    const menuBtn = e.target.parentElement;
+// render the header section
+renderHeader();
 
-    // get the navbar element
-    const navbar = menuBtn.nextSibling;
+// get the nav items from the loaded dom elements
+const tablist = document.querySelectorAll('.header__nav-link');
 
-    // remove the class close from the menu btn
-    menuBtn.classList.remove('close');
-
-    // add the class open to the menu btn
-    menuBtn.classList.add('open');
-
-    // remove the class close from the navbar
-    navbar.classList.remove('close');
-  } else if (e.target.dataset.btn === 'menu-close') {
-    // get the menu btn element
-    const menuBtn = e.target.parentElement;
-
-    // get the navbar element
-    const navbar = menuBtn.nextSibling;
-
-    // remove the class open from the menu btn
-    menuBtn.classList.remove('open');
-
-    // add the class close to the menu btn
-    menuBtn.classList.add('close');
-
-    // add the class close to the navbar
-    navbar.classList.add('close');
-  }
-});
+// add event listener to the nav tab
+pageNav(tablist, removeActive);
