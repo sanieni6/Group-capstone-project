@@ -2,7 +2,7 @@ import artworks from './artworks.js';
 import fetchData from './util/fetchData.js';
 import counter from './util/counter.js';
 import pageRender from './util/pageRender.js';
-
+import fetchPopup from './util/fetchPopup.js';
 // get the main element from the dom
 const pageMain = document.querySelector('.main');
 
@@ -37,6 +37,7 @@ const pageNav = (navItems, removeClass) => {
           counter(artworkCollection, artworksCount);
         }).then(() => {
           // add render comment pop-up here
+          fetchPopup();
         });
       } else if (event.target.textContent === 'Exhibitions') {
         // call the remove class function
