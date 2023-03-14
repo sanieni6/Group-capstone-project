@@ -1,5 +1,7 @@
 import fetchData from './fetchData.js';
 import renderPopup from './renderPopup.js';
+import newComment from './newComment.js';
+import renderCommentList from './generateCommentList.js';
 
 const renderModal = (modal, content = '') => {
   if (content === '') {
@@ -21,9 +23,23 @@ const fetchPopup = () => {
         const displayed = document.querySelector('.artworks__modal');
         const container = document.querySelector('.container');
         const closeBtn = document.querySelector('.artworks__modal-btn');
+        const formSubmit = document.querySelector('.artworks__modal-comments-add');
+        const name = document.getElementById('name');
+        const message = document.getElementById('comment');
         closeBtn.addEventListener('click', () => {
           container.removeChild(displayed);
         });
+        formSubmit.addEventListener('submit', (event) => {
+          event.preventDefault();
+          newComment(id, name.value, message.value);
+          name.value = '';
+          message.value = '';
+          setTimeout(() => {
+            renderCommentList(id);
+          }, 1000);
+        });
+      }).then(() => {
+        renderCommentList(id);
       });
     });
   });
