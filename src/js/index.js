@@ -7,6 +7,7 @@ import pageRender from './modules/util/pageRender.js';
 import counter from './modules/util/counter.js';
 import fetchData from './modules/util/fetchData.js';
 import artworks from './modules/artworks.js';
+import fetchPopup from './modules/util/fetchPopup.js';
 
 // render the header section
 renderHeader();
@@ -38,4 +39,5 @@ fetchData(URL).then((artworkArr) => {
   counter(artworkCollection, artworksCount);
 }).then(() => {
   // add render comment pop-up here
+  fetchPopup();
 });
