@@ -31,9 +31,9 @@ const renderPopup = async (data) => {
         </div>
         <div class="artworks__modal-comments">
             <h4 class="artworks__modal-comments-title">
-            "Comments"
+            Comments
             <span class="artworks__modal-comments-count"></span>
-            ":"
+            :
             </h4>
             <ul class="artworks__modal-comments-list">
             </ul>
