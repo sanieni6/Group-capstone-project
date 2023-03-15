@@ -21,13 +21,29 @@ const pageMain = document.querySelector('.main');
 // add event listener to the nav tab
 pageNav(tablist, removeActive);
 
-// define the api url
-const URL = 'https://api.artic.edu/api/v1/artworks?limit=20&fields=id,title,artist_display,place_of_origin,credit_line,term_titles,image_id';
+// define the api urls
+const URL_ARTWORKS = 'https://api.artic.edu/api/v1/artworks?limit=20&fields=id,title,artist_display,place_of_origin,credit_line,term_titles,image_id';
+const URL_LIKES = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/yf6dqoUrsU3EfHXvC1i4/likes';
 
 // call data from artwork api and render on page
-fetchData(URL).then((artworkArr) => {
+Promise.all([
+  fetchData(URL_ARTWORKS),
+  fetchData(URL_LIKES),
+]).then(([artworksData, likesData]) => {
+  // get the artworks data array
+  const artworksArr = artworksData.data;
+
+  // combined likes objects information with the artworks object information
+  const artworksAndLikes = artworksArr.map((artwork) => {
+    const likesObj = likesData.find((like) => like.item_id === artwork.id.toString());
+    return {
+      ...artwork,
+      likes: likesObj ? likesObj.likes : 0,
+    };
+  });
+
   // render content on page
-  pageRender(pageMain, artworks, artworkArr.data);
+  pageRender(pageMain, artworks, artworksAndLikes);
 }).then(() => {
   // get the count element
   const artworksCount = document.querySelector('.artworks__count');
