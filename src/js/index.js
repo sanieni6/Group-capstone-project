@@ -25,12 +25,6 @@ pageNav(tablist, removeActive);
 const URL_ARTWORKS = 'https://api.artic.edu/api/v1/artworks?limit=20&fields=id,title,artist_display,place_of_origin,credit_line,term_titles,image_id';
 const URL_LIKES = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/yf6dqoUrsU3EfHXvC1i4/likes';
 
-fetchData(URL_ARTWORKS).then((artworksData) => {
-  console.log(artworksData); // Log the artworksData array to the console
-}).catch((error) => {
-  console.error(error);
-});
-
 // call data from artwork api and render on page
 Promise.all([
   fetchData(URL_ARTWORKS),
