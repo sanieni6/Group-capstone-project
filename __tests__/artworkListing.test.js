@@ -1,25 +1,26 @@
-// create a mock function for localStorage
-const localStorageMock = (() => {
-  let store = {};
+import counter from '../src/js/modules/util/counter.js';
 
-  return {
-    getItem(key) {
-      return store[key];
-    },
+describe('counter function', () => {
+  test('update the count of items on the home screen', () => {
+    // create a mock dom elements to count
+    document.body.innerHTML = `
+      <div id="target-1"></div>
+      <div id="target-2"></div>
+      <div id="target-3"></div>
+    `;
 
-    setItem(key, value) {
-      store[key] = value;
-    },
+    // create the target variables
+    const target = document.querySelectorAll('div');
 
-    clear() {
-      store = {};
-    },
+    // create an elements to display the count on screen
+    const output = document.createElement('span');
 
-    removeItem(key) {
-      delete store[key];
-    },
-  };
-})();
+    document.body.appendChild(output);
 
-// mock the local storage
-Object.defineProperty(window, 'localStorage', { value: localStorageMock });
+    // call the counter function
+    counter(target, output);
+
+    // test the output
+    expect(output.textContent).toBe('(3)');
+  });
+});
