@@ -28,7 +28,7 @@ const URL_LIKES = 'https://us-central1-involvement-api.cloudfunctions.net/capsto
 // call data from artwork api and render on page
 Promise.all([
   fetchData(URL_ARTWORKS),
-  fetchData(URL_LIKES)
+  fetchData(URL_LIKES),
 ]).then(([artworksData, likesData]) => {
   // get the artworks data array
   const artworksArr = artworksData.data;

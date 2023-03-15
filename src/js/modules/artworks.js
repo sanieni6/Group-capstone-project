@@ -22,8 +22,7 @@ const artworks = async (artworksArr) => {
           </div>
         </figcaption>
      </figure>
-    `
-);
+    `);
   pageMain.insertAdjacentHTML('afterbegin', `<div class='artworks'>${pageHeader}<div class="artworks__wrapper">${artworksHtmlContent.join('')}</div></div>`);
 };
 
