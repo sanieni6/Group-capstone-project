@@ -5,8 +5,13 @@ const renderCommentList = (id) => {
   const ulElement = document.querySelector('.artworks__modal-comments-list');
 
   fetchData(url).then((data) => {
-    const renderedList = data.map((comment) => `<li class="artworks__modal-comments-item">${comment.creation_date} ${comment.username}: ${comment.comment}</li>`).join('');
-    ulElement.innerHTML = renderedList;
+    if (data === 'no data') {
+      const noComment = 'No comments';
+      ulElement.innerHTML = `<li class="artworks__modal-comments-item">${noComment}</li>`;
+    } else {
+      const renderedList = data.map((comment) => `<li class="artworks__modal-comments-item">${comment.creation_date} ${comment.username}: ${comment.comment}</li>`).join('');
+      ulElement.innerHTML = renderedList;
+    }
   });
 };
 
