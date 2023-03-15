@@ -1,4 +1,4 @@
-import postApi from './post.js';
+import postApi from './postApi.js';
 import renderCommentList from './generateCommentList.js';
 
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/yf6dqoUrsU3EfHXvC1i4/comments';
