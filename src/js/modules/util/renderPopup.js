@@ -35,6 +35,8 @@ const renderPopup = async (data) => {
             <span class="artworks__modal-comments-count"></span>
             ":"
             </h4>
+            <ul class="artworks__modal-comments-list">
+            </ul>
             <form class="artworks__modal-comments-add">
             <input type="text" name="name" id="name" placeholder="Your name" required>
             <textarea class="artworks__modal-comments-input" name="message" id="comment" cols="30" rows="4" maxlength="500" placeholder="Your insights..." required></textarea>
