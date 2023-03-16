@@ -77,7 +77,7 @@ const pageNav = (navItems, removeClass) => {
                 // call the postApi to update the like count
                 postApi(URL_LIKES, likedItemData).then(() => {
                   // update the like count by 1
-                  likesCount = likesCount + 1;
+                  likesCount += 1;
 
                   // update the like count on the screen
                   likeCounter.textContent = likesCount > 1 ? `${likesCount} Likes` : `${likesCount} Like`;
