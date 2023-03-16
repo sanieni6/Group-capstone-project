@@ -52,7 +52,6 @@ For this particular project, we will use the following endpoints:
 - The following interfaces were built:
   - The *home page*.
   - The *comments popup*.
-  - The *reservations popup*
 - the given [layout](https://github.com/microverseinc/curriculum-javascript/blob/main/group-capstone/buisness_requirements.md#description) was followed with additional personalization(colors, typographies, spacings, etc).
 - Home page
   - When the page loads, the webapp retrieves data from:
@@ -63,7 +62,6 @@ For this particular project, we will use the following endpoints:
     - And **one** to the Involvement API.
   - When the user clicks on the Like button of an item, the interaction is recorded in the Involvement API and the screen is updated.
   - When the user clicks on the "Comments" button, the Comments popup appears.
-  - When the user clicks on the "Reservations" button, the Reservations popup appears (only for the groups of 3 students).
   - Home page header and navigation similar to the given mockup.
   - Home page footer similar to the given mockup.
 - Comments popup
@@ -71,15 +69,9 @@ For this particular project, we will use the following endpoints:
     - The selected API and shows details about the selected item.
     - The Involvement API to show the item comments.
   - When the user clicks on the "Comment" button, the data is recorded in the Involvement API and the screen is updated.
-- Reservations popup (only for the groups of 3 students)
-  - When the popup loads, the webapp retrieves data from:
-    - The selected API and shows details about the selected item.
-    - The Involvement API to show the item reservations.
-  - When the user clicks on the "Reserve" button, the data is recorded in the Involvement API and the screen is updated.
 - We have counters in all the interfaces that show:
   - The number of items (home).
-  - The number of comments (comments popup).
-  - The number of reservations (reservations popup) - only for the groups of 3 students.
+  - The number of comments (comments popup)..
   - Each counter was implemented as a separate module.
   - A counter function looks for specific DOM elements (e.g. for the comments counter it should look for comments) and make the counting based on what is actually displayed on the page.
   - The counter function covers all the edge cases you can think about.
@@ -117,7 +109,7 @@ For this particular project, we will use the following endpoints:
 ### Live Demo Link <a name="live-demo-link"></a>
 > [Live Demo Link](https://sanieni6.github.io/artworkListing-app/)
 
-> [Video Demo Link](#)
+> [Video Demo Link](https://www.loom.com/share/e9669adcd79e40ffa246bca76faf8305)
 
 ## 📸 Screenshots <a name="screenshots"></a>
 
@@ -167,6 +159,7 @@ To get a local copy up and running follow these simple example steps.
 
 - Internet connection
 - A github account
+- An IDE (Vscode)
 
 ### Install <a name="install"></a>
 
