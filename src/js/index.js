@@ -8,6 +8,7 @@ import counter from './modules/util/counter.js';
 import fetchData from './modules/util/fetchData.js';
 import artworks from './modules/artworks.js';
 import fetchPopup from './modules/util/fetchPopup.js';
+import postApi from './modules/util/postApi.js';
 
 // render the header section
 renderHeader();
@@ -53,6 +54,39 @@ Promise.all([
 
   // call the count function
   counter(artworkCollection, artworksCount);
+
+  // add event listener to page
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('unlike-icon')) {
+      // get the like button
+      const likeBtn = e.target.parentElement;
+
+      // get the likes counter element
+      const likeCounter = likeBtn.nextElementSibling
+
+      // get the current likes counts
+      let likesCount = parseInt(likeCounter.textContent.split(' ')[0], 10);
+
+      // add the click liked ot the btn
+      likeBtn.classList.add('liked');
+
+      // get the item id
+      const item_id = likeBtn.dataset.likeBtn;
+
+      // create an object variable
+      const likedItemData = { item_id };
+
+      console.log(likesCount);
+
+      postApi(URL_LIKES, likedItemData).then(() => {
+        // update the like count by 1
+        likesCount++;
+
+        // update the like count on the screen
+        likeCounter.textContent = likesCount > 1 ? `${likesCount} Likes` : `${likesCount} Like`;
+      });
+    }
+  });
 }).then(() => {
   // add render comment pop-up here
   fetchPopup();
