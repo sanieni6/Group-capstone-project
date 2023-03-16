@@ -484,7 +484,7 @@
     width: 100%;
     padding-block: 1rem;
 
-    &>* {
+    & > * {
       width: 100%;
     }
 
@@ -511,7 +511,7 @@
       row-gap: 12px;
       padding-block: 1rem;
 
-      &>* {
+      & > * {
         width: 100%;
         max-width: 300px;
       }
@@ -631,7 +631,7 @@
     width: 100%;
     padding-block: 1rem;
 
-    &>* {
+    & > * {
       width: 100%;
     }
 
@@ -658,7 +658,7 @@
       row-gap: 0.75rem;
       padding-block: 1rem;
 
-      &>* {
+      & > * {
         width: 100%;
         max-width: 300px;
       }

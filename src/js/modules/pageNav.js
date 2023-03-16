@@ -63,7 +63,7 @@ const pageNav = (navItems, removeClass) => {
                 const likeBtn = e.target.parentElement;
 
                 // get the likes counter element
-                const likeCounter = likeBtn.nextElementSibling
+                const likeCounter = likeBtn.nextElementSibling;
 
                 // get the current likes counts
                 let likesCount = parseInt(likeCounter.textContent.split(' ')[0], 10);
@@ -77,7 +77,7 @@ const pageNav = (navItems, removeClass) => {
                 // create an object variable
                 const likedItemData = { item_id };
 
-                 // call the postApi to update the like count
+                // call the postApi to update the like count
                 postApi(URL_LIKES, likedItemData).then(() => {
                   // update the like count by 1
                   likesCount++;
