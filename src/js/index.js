@@ -55,37 +55,40 @@ Promise.all([
   // call the count function
   counter(artworkCollection, artworksCount);
 
-  // add event listener to page
-  document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('unlike-icon')) {
-      // get the like button
-      const likeBtn = e.target.parentElement;
+  const likeBtns = document.querySelectorAll('.artworks__item-btn');
 
-      // get the likes counter element
-      const likeCounter = likeBtn.nextElementSibling
+  likeBtns.forEach((btn) => {
+    // add event listener to page
+    btn.addEventListener('click', (e) => {
+      if (e.target.classList.contains('unlike-icon')) {
+        // get the like button
+        const likeBtn = e.target.parentElement;
 
-      // get the current likes counts
-      let likesCount = parseInt(likeCounter.textContent.split(' ')[0], 10);
+        // get the likes counter element
+        const likeCounter = likeBtn.nextElementSibling
 
-      // add the click liked ot the btn
-      likeBtn.classList.add('liked');
+        // get the current likes counts
+        let likesCount = parseInt(likeCounter.textContent.split(' ')[0], 10);
 
-      // get the item id
-      const item_id = likeBtn.dataset.likeBtn;
+        // add the click liked ot the btn
+        likeBtn.classList.add('liked');
 
-      // create an object variable
-      const likedItemData = { item_id };
+        // get the item id
+        const item_id = likeBtn.dataset.likeBtn;
 
-      console.log(likesCount);
+        // create an object variable
+        const likedItemData = { item_id };
 
-      postApi(URL_LIKES, likedItemData).then(() => {
-        // update the like count by 1
-        likesCount++;
+        // call the postApi to update the like count
+        postApi(URL_LIKES, likedItemData).then(() => {
+          // update the like count by 1
+          likesCount++;
 
-        // update the like count on the screen
-        likeCounter.textContent = likesCount > 1 ? `${likesCount} Likes` : `${likesCount} Like`;
-      });
-    }
+          // update the like count on the screen
+          likeCounter.textContent = likesCount > 1 ? `${likesCount} Likes` : `${likesCount} Like`;
+        });
+      }
+    });
   });
 }).then(() => {
   // add render comment pop-up here
