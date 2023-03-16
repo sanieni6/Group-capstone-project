@@ -71,16 +71,13 @@ const pageNav = (navItems, removeClass) => {
                 // add the click liked ot the btn
                 likeBtn.classList.add('liked');
 
-                // get the item id
-                const item_id = likeBtn.dataset.likeBtn;
-
                 // create an object variable
-                const likedItemData = { item_id };
+                const likedItemData = { item_id: likeBtn.dataset.likeBtn };
 
                 // call the postApi to update the like count
                 postApi(URL_LIKES, likedItemData).then(() => {
                   // update the like count by 1
-                  likesCount++;
+                  likesCount = likesCount + 1;
 
                   // update the like count on the screen
                   likeCounter.textContent = likesCount > 1 ? `${likesCount} Likes` : `${likesCount} Like`;
