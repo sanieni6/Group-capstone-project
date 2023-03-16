@@ -15,9 +15,12 @@ const artworks = async (artworksArr) => {
           <h2 class="artworks__item-title">${artwork.title}</h2>
           <p class="artworks__item-author">${artwork.artist_display}</p>
           <div class="artworks__item-interact">
-            <button class="artworks__item-btn like-btn">
-              <img class="like-img hidden" src="${likeIcon}" alt="like"> <img class="like-img" src="${unLikeIcon}" alt="like"> <span class='like-count'>${artwork.likes} ${artwork.likes > 1 ? 'likes' : 'like'}</span>
-            </button>
+            <div class="artworks__item-interact-likes">
+              <button class="artworks__item-btn like-btn" data-like-btn="${artwork.id}">
+                <img class="like-img like-icon" src="${likeIcon}" alt="like"> <img class="unlike-img unlike-icon" src="${unLikeIcon}" alt="like"> 
+              </button>
+              <span class='like-count'>${artwork.likes} ${artwork.likes > 1 ? 'likes' : 'like'}</span>
+            </div>
             <button id ="comment-${artwork.id}"class="artworks__item-btn comment-btn">Comment</button>
           </div>
         </figcaption>

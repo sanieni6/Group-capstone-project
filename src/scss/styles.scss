@@ -214,28 +214,51 @@
       margin-block: 1rem;
       font-size: 1rem;
       color: colors.$dark;
+
+      &-likes {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
     }
 
     &-btn.like-btn {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      padding: 0;
       background-color: transparent;
       border: none;
       cursor: pointer;
 
       & .like-img {
+        display: none;
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+      }
+
+      & .unlike-img {
         display: inline-block;
         width: 30px;
         height: 30px;
         object-fit: cover;
+      }
 
-        &.hidden {
+      &.liked {
+        & .like-img {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          object-fit: cover;
+        }
+
+        & .unlike-img {
           display: none;
+          width: 30px;
+          height: 30px;
+          object-fit: cover;
         }
       }
 
-      &:hover .like-img {
+      &:hover .unlike-img {
         filter: invert(13%) sepia(94%) saturate(7466%) hue-rotate(0deg) brightness(94%) contrast(115%);
       }
     }
